@@ -18,6 +18,9 @@
 # misc
 .DS_Store
 *.pem
+/public/manifest.json
+/public/sw.js
+/public/workbox*
 
 # debug
 npm-debug.log*
