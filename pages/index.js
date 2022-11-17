@@ -1,43 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
-const RestockItem = ({ filled }) => {
-  const conditionalStyles = `${styles.listItem} ${filled ? styles.bgBlue : ''}`
-
-  return (
-    <div className={conditionalStyles}>
-      <div className={styles.grid}>
-        <h2 className={styles.flex}>17 November 2022 (80)</h2>
-      </div>
-      <div className={styles.grid}>
-        <div className={styles.flex2}>
-          <p>Jumlah tabung masuk : 87</p>
-          <p>Jumlah tabung keluar : 36</p>
-        </div>
-        <div className={`${styles.flex} ${styles.alignRight}`}>
-          <h1>44 | 43</h1>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-const TransactionItem = () => {
-  return (
-    <div className={styles.listItem}>
-      <div className={styles.grid}>
-        <div className={styles.flex3}>
-          <h2 className={styles.flex}>Ani Basauaaaaaaa</h2>
-          <p>31 Desember 21:19</p>
-        </div>
-        <div className={`${styles.flex} ${styles.alignRight}`}>
-          <h1>+23</h1>
-        </div>
-      </div>
-    </div>
-  )
-}
+import RestockItem from '../components/RestockItem'
 
 export default function Home() {
   return (
@@ -56,10 +20,6 @@ export default function Home() {
           <RestockItem />
           <RestockItem />
         </div>
-
-        <button className={styles.fab}>
-          +
-        </button>
       </main>
 
       <footer className={styles.footer}>
